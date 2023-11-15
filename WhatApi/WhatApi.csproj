@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SqlSugarCore" Version="5.0.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalApi\GlobalApi.csproj" />
+    <ProjectReference Include="..\GlobalBussiness\GlobalBussiness.csproj" />
+    <ProjectReference Include="..\GlobalCommon\GlobalCommon.csproj" />
+    <ProjectReference Include="..\WhatCommon\WhatCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Template\" />
+    <Folder Include="temporary\" />
+  </ItemGroup>
+
+</Project>

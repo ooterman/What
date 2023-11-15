@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalBussiness\GlobalBussiness.csproj" />
+    <ProjectReference Include="..\GlobalCommon\GlobalCommon.csproj" />
+    <ProjectReference Include="..\WhatCommon\WhatCommon.csproj" />
+  </ItemGroup>
+
+</Project>
